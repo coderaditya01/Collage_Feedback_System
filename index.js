@@ -17,7 +17,7 @@ app.set('view engine','html')
 app.use(express.json())
 
 // Routes 
-app.get("/", (req, res)=>{ 
+app.get("", (req, res)=>{ 
     const params = {}
     res.status(200).render('home.html',params);
 });
