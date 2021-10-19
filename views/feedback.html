@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>U.I.E.T. STUDENT'S FEEDBACK PORTEL</title>
+</head>
+
+<body>
+    <h1>U.I.E.T. STUDENT'S FEEDBACK PORTEL</h1>
+    <div class="contain">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active px-2">
+                    <a class="nav-link adi" href="home">Home</a>
+                </li>
+                <li class="nav-item active px-2">
+                    <a class="nav-link adi" href="feedback">Submit a feedback</a>
+                </li>
+                <li class="nav-item active px-2">
+                    <a class="nav-link adi" href="#feed">Student's feedback</a>
+                </li>
+
+            </ul>
+
+    </div>
+
+
+    </nav>
+    </div>
+    <div class="container">
+        <div class="card mx-auto mt-4 shadow rounded" style="width: 30rem;">
+            <div class="card-body">
+                <h4 class="card-title font-weight-bold text-center">
+                    <h2 class="text-center">Submit a feedback</h2>
+                </h4>
+                <form action="" class="needs-validation">
+                    <div class="col-md-12">
+                        <div class="form-group ">
+                            <label for="yourname">Name</label>
+                            <input type="text" name="yourname" placeholder="" class="form-control" id="yourname"
+                                aria-describedby="emailHelp" required minlength="3">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group ">
+                            <label for="course">Course</label>
+                            <input type="text" name="course" placeholder="" class="form-control" id="course"
+                                aria-describedby="emailHelp" required minlength="3">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group ">
+                            <label for="phoneno">Phone_No</label>
+                            <input type="text" name="phoneno" placeholder="" class="form-control" id="phoneno"
+                                aria-describedby="emailHelp" required minlength="3">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="textarea">Feedback</label>
+                            <textarea type="text" class="form-control" name="comment" id="textarea" rows="3"
+                                placeholder="" required minlength="20"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button id="submitBtn" class="btn btn-success w-100 ">Post comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="contain">
+        <div class="navbar mt-4 navbar-dark bg-dark justify-content-center">
+
+            <h4 class="card-title font-weight-bold ">
+                <h3>Student's feedbacks</h3>
+            </h4>
+        </div>
+    </div>
+    <section id="feed">
+    <div class="container mt-4">
+        <div class="row" >
+
+            <div class="col-md-12 " >
+                <div class="typing text-success"></div>
+                <ul class="comment__box">
+                    <!--   <li class="comment">
+                        <div class="card border-light mb-3">
+                            <div class="card-body">
+                                <h6>John Doe</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
+                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
+                                    blanditiis!</p>
+                                <div>
+                                    <img src="/img/clock.png" alt="clock">
+                                    <small>11:30 PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                    <!-- <li class="comment">
+                        <div class="card border-light mb-3">
+                            <div class="card-body">
+                                <h6>John Doe</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
+                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
+                                    blanditiis!</p>
+                                <div>
+                                    <img src="/img/clock.png" alt="clock">
+                                    <small>11:30 PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submitBtn', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>

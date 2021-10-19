@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime comment system</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>U.I.E.T. STUDENT'S FEEDBACK PORTEL</h1>
+    <div class="contain">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active px-2">
+                        <a class="nav-link adi" href="home">Home</a>
+                    </li>
+                    <li class="nav-item active px-2">
+                        <a class="nav-link adi" href="indexx">Submit a feedback</a>
+                    </li>
+                    <li class="nav-item active px-2">
+                        <a class="nav-link adi" href="feedb">Student's feedback</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active dropdown px-2">
+                        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-2x fa-user-circle "></i>
+                        </a>
+                        <div class="dropdown-menu px-3" aria-labelledby="UserAccount">
+                            <div class="d-flex flex-column justify-content-center">
+
+                                <a href="login" class="btn btn-warning w-75 btn-sm font-weight-bold">Signin</a>
+                                <small>New to portel?<a href="register"> Start here.</a></small>
+                            </div>
+                    <li class="nav-item active mt-1 px-2">
+                        <a class="nav-link adi" href="#">Your Profile</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="typing text-success"></div>
+            <ul class="comment__box">
+                <!--  <li class="comment">
+                        <div class="card border-light mb-3">
+                            <div class="card-body">
+                                <h6>John Doe</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
+                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
+                                    blanditiis!</p>
+                                <div>
+                                    <img src="/img/clock.png" alt="clock">
+                                    <small>11:30 PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                <!-- <li class="comment">
+                        <div class="card border-light mb-3">
+                            <div class="card-body">
+                                <h6>John Doe</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
+                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
+                                    blanditiis!</p>
+                                <div>
+                                    <img src="/img/clock.png" alt="clock">
+                                    <small>11:30 PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+            </ul>
+        </div>
+    </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submitBtn', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>
