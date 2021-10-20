@@ -82,7 +82,7 @@ function debounce(func, timer) {
 }
 let typingDiv = document.querySelector('.typing')
 socket.on('typing', (data) => {
-    typingDiv.innerText = `${data.username} is typing...`
+    typingDiv.innerText = `someone is typing...`
     debounce(function() {
         typingDiv.innerText = ''
     }, 1000)
@@ -111,7 +111,7 @@ function fetchComments () {
         .then(res => res.json())
         .then(result => {
             result.forEach((comment) => {
-                comment.time = comment.createdAt
+                comment.date = comment.createdAt
                 appendToDom(comment)
             })
         })
