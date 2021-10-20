@@ -8,9 +8,8 @@ const app = express()
 const host = 'localhost';
 const port = 3000;
 //use alternate localhost and the port Heroku assigns to $PORT
-const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
-const port = process.env.PORT || 3000
+
 
 app.use(express.static('public'))
 var cons = require('consolidate');
