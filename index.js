@@ -1,12 +1,8 @@
 const dotenv = require("dotenv");
 const path = require("path");
 dotenv.config();
-const express = require('express')
-const app = express()
-
-//port (as described above) and host are both wrong
-const host = 'localhost';
-//use alternate localhost and the port Heroku assigns to $PORT
+const express = require('express');
+const app = express();
 const port = process.env.PORT || 3000;
 
 
