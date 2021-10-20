@@ -6,7 +6,7 @@ const db_url = process.env.DB_URL;
 
 // Establish Database Connection
 mongoose.connect( 
-  db_url,
+  'mongodb+srv://adityaatul:1234567Ak@@cluster0.wmvga.mongodb.net/feedback_form?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
