@@ -3,6 +3,7 @@ let socket = io()
 
 const yourname = document.querySelector('#yourname')
 const course = document.querySelector('#course')
+const hostal = document.querySelector('#hostal')
 const phoneno = document.querySelector('#phoneno')
 const textarea = document.querySelector('#textarea')
 const submitBtn = document.querySelector('#submitBtn')
@@ -14,26 +15,29 @@ submitBtn.addEventListener('click', (e) => {
     let comment = textarea.value
     let name=yourname.value
     let Course =course.value
+    let Hostal =hostal.value
     let PhoneNo =phoneno.value
-    if(!comment || !name || !Course || !PhoneNo) {
+    if(!comment || !name || !Course || !Hostal || !PhoneNo) {
         return  
     }
-    postComment(comment,name,Course,PhoneNo)
+    postComment(comment,name,Course,Hostal,PhoneNo)
 }) 
 
-function postComment(comment,name,Course,PhoneNo) {
+function postComment(comment,name,Course,Hostal,PhoneNo) {
     // Append to dom
     let data = {
         username: username,
         name:name,
         comment: comment,
         Course : Course,
+        Hostal : Hostal,
         PhoneNo: PhoneNo
     }
     appendToDom(data)
     textarea.value = ''
     yourname.value = ''
     course.value = ''
+    hostal.value = ''
     phoneno.value = ''
     // Broadcast
     broadcastComment(data)
@@ -49,8 +53,11 @@ function appendToDom(data) {
     let markup = `
                         <div class="card border-light mb-3 shadow rounded">
                             <div class="card-body">
-                                <h6>${data.name} ( ${data.Course} )</h6>
+                                <h6 class="text-uppercase">${data.name} ( ${data.Course} )</h6>
+                                <small class="text-uppercase"><strong>Hostal : ${data.Hostal}</strong></small>
+                                <div class="mt-2 text-uppercase">
                                 <p>${data.comment}</p>
+                                </div>
                                 <div>
                                     <img src="/img/clock.png" alt="clock">
                                     <small>${moment(data.date).format('Do MMMM YYYY')}</small>
