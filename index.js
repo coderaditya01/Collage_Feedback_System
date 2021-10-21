@@ -1,10 +1,10 @@
 const dotenv = require("dotenv");
 const path = require("path");
 dotenv.config();
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
+const express = require('express')
+const app = express()
 
+const port = process.env.PORT || 3000
 
 app.use(express.static('public'))
 var cons = require('consolidate');
@@ -37,6 +37,7 @@ app.post('/api/comments', (req, res) => {
     const comment = new Comment({
         name: req.body.name,
         Course: req.body.Course,
+        Hostal: req.body.Hostal,
         PhoneNo: req.body.PhoneNo,
         comment: req.body.comment,
     })
