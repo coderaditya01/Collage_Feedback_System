@@ -7,6 +7,7 @@ const commentSchema = new Schema({
     
     name: { type: String, require: true },
     Course: { type: String, require: true },
+    Hostal: { type: String, require: true },
     PhoneNo: { type: String, require: true },
     comment: { type: String, require: true }
 }, { timestamps: true })
