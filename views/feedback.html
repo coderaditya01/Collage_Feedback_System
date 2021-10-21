@@ -19,28 +19,31 @@
     <h1>U.I.E.T. STUDENT'S FEEDBACK PORTEL</h1>
     <div class="contain">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active px-2">
-                    <a class="nav-link adi" href="home">Home</a>
-                </li>
-                <li class="nav-item active px-2">
-                    <a class="nav-link adi" href="feedback">Submit a feedback</a>
-                </li>
-                <li class="nav-item active px-2">
-                    <a class="nav-link adi" href="#feed">Student's feedback</a>
-                </li>
-
-            </ul>
-
-    </div>
-
-
-    </nav>
-    </div>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active px-2">
+                  <a class="nav-link adi" href="home">Home</a>
+              </li>
+              <li class="nav-item active px-2">
+                  <a class="nav-link adi" href="feedback">Submit a feedback</a>
+              </li>
+              <li class="nav-item active px-2">
+                  <a class="nav-link adi" href="feedb">Student's feedback</a>
+              </li>
+      
+          </ul>>
+            
+          </div>
+          
+        
+        </nav>
+      </div>
     <div class="container">
-        <div class="card mx-auto mt-4 shadow rounded">
+        <div class="card mx-auto mt-4 shadow rounded" style="width: 30rem;">
             <div class="card-body">
                 <h4 class="card-title font-weight-bold text-center">
                     <h2 class="text-center">Submit a feedback</h2>
@@ -65,7 +68,6 @@
                             <label for="hostal">Hostal:</label>
                             <input type="text" name="hostal" placeholder="" class="form-control" id="hostal"
                                 aria-describedby="emailHelp" required minlength="3">
-                            <small id="emailHelp" class="form-text text-muted">If not in hostal than write Other.</small>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -90,59 +92,22 @@
         </div>
     </div>
     </div>
-    <div class="contain">
-        <div class="navbar mt-4 navbar-dark bg-dark justify-content-center">
+    <div class="comment__box d-none">
 
-            <h4 class="card-title font-weight-bold ">
-                <h3>Student's feedbacks</h3>
-            </h4>
-        </div>
     </div>
-    <section id="feed">
-    <div class="container mt-4">
-        <div class="row" >
-
-            <div class="col-md-12 " >
-                <div class="typing text-success"></div>
-                <ul class="comment__box">
-                    <!--   <li class="comment">
-                        <div class="card border-light mb-3">
-                            <div class="card-body">
-                                <h6>John Doe</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
-                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
-                                    blanditiis!</p>
-                                <div>
-                                    <img src="/img/clock.png" alt="clock">
-                                    <small>11:30 PM</small>
-                                </div>
-                            </div>
-                        </div>
-                    </li> -->
-                    <!-- <li class="comment">
-                        <div class="card border-light mb-3">
-                            <div class="card-body">
-                                <h6>John Doe</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque,
-                                    exercitationem fuga sint enim non cupiditate deserunt soluta consequuntur
-                                    blanditiis!</p>
-                                <div>
-                                    <img src="/img/clock.png" alt="clock">
-                                    <small>11:30 PM</small>
-                                </div>
-                            </div>
-                        </div>
-                    </li>-->
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+   
 <div class="row mt-3 mx-0 px-0">
     <div class="col-md-12 py-2px text-center bg-dark">
       <p class="font-italic text-light ">&copy; Copyrights uietfeedbackportel.com All rights reserved.</p>
     </div>
   </div>
+  
+    
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
     <script src="/js/app.js"></script>
