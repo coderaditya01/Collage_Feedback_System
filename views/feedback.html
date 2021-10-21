@@ -40,8 +40,7 @@
     </nav>
     </div>
     <div class="container">
-        <div class="card mx-auto mt-4 shadow rounded"
->
+        <div class="card mx-auto mt-4 shadow rounded" style="width: 30rem;">
             <div class="card-body">
                 <h4 class="card-title font-weight-bold text-center">
                     <h2 class="text-center">Submit a feedback</h2>
@@ -49,28 +48,35 @@
                 <form action="" class="needs-validation">
                     <div class="col-md-12">
                         <div class="form-group ">
-                            <label for="yourname">Name</label>
+                            <label for="yourname">Name:</label>
                             <input type="text" name="yourname" placeholder="" class="form-control" id="yourname"
                                 aria-describedby="emailHelp" required minlength="3">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group ">
-                            <label for="course">Course</label>
+                            <label for="course">Course:</label>
                             <input type="text" name="course" placeholder="" class="form-control" id="course"
                                 aria-describedby="emailHelp" required minlength="3">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group ">
-                            <label for="phoneno">Phone_No</label>
+                            <label for="hostal">Hostal:</label>
+                            <input type="text" name="hostal" placeholder="" class="form-control" id="hostal"
+                                aria-describedby="emailHelp" required minlength="3">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group ">
+                            <label for="phoneno">Phone_No:</label>
                             <input type="text" name="phoneno" placeholder="" class="form-control" id="phoneno"
                                 aria-describedby="emailHelp" required minlength="3">
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="textarea">Feedback</label>
+                            <label for="textarea">Feedback:</label>
                             <textarea type="text" class="form-control" name="comment" id="textarea" rows="3"
                                 placeholder="" required minlength="20"></textarea>
                         </div>
@@ -131,30 +137,16 @@
         </div>
     </div>
 </section>
+<div class="row mt-3 mx-0 px-0">
+    <div class="col-md-12 py-2px text-center bg-dark">
+      <p class="font-italic text-light ">&copy; Copyrights uietfeedbackportel.com All rights reserved.</p>
+    </div>
+  </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
     <script src="/js/app.js"></script>
 
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submitBtn', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
+    
 </body>
 
 </html>
