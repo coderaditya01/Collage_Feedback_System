@@ -54,7 +54,7 @@ function appendToDom(data) {
                         <div class="card border-light mb-3 shadow rounded">
                             <div class="card-body">
                                 <h6 class="text-uppercase">${data.name} ( ${data.Course} )</h6>
-                                <small class="text-uppercase"><strong>Hostal : ${data.Hostal}</strong></small>
+                                <small class="text-uppercase"><strong>Hostal/Locality : ${data.Hostal}</strong></small>
                                 <div class="mt-2 text-uppercase">
                                 <p>${data.comment}</p>
                                 </div>
