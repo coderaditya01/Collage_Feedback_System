@@ -21,7 +21,6 @@ submitBtn.addEventListener('click', (e) => {
         return  
     }
     postComment(comment,name,Course,Hostal,PhoneNo)
-    alert('Feedback Submitted!')
 }) 
 
 function postComment(comment,name,Course,Hostal,PhoneNo) {
